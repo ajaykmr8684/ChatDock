@@ -3,7 +3,7 @@ const socket = io();
 const form = document.getElementById("sendContainer");
 const messageInput = document.getElementById("messageInput");
 const messageContainer = document.querySelector(".container");
-
+// const name = prompt("Enter your name");
 var audio = new Audio("sound.mp3");
 
 //Get Name
@@ -13,7 +13,7 @@ const fullName = Qs.parse(location.search, {
 });
 
 const name = fullName.firstName;
-console.log(name);
+// console.log(name);
 
 
 

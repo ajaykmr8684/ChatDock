@@ -31,9 +31,10 @@ app.post("chat.html", (request,respond)=>{
 //socket.on will listen to a particular instances
 io.on("connection", (socket)=>{
   socket.on("new-user-joined", (name)=>{
-    console.log("New User", name);
+    // console.log("New User", name);
     users[socket.id] = name;
     socket.broadcast.emit("user-joined", name);
+
   });
 
   socket.on("send", (message)=>{
