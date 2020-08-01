@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 const path = require("path");
 const server = http.createServer(app);
 const io = socketio(server);
-const PORT = 3000 || process.env.PORT;
+const PORT =  process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, "public")));
 const users = {}
 
@@ -50,6 +50,6 @@ socket.on("disconnect", (message)=>{
 
 
 });
-server.listen(PORT, ()=>{
+app.listen(PORT, ()=>{
   console.log("Server has just started...");
 })
