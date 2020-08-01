@@ -96,6 +96,6 @@ socket.on("disconnect", (message)=>{
 
 
 });
-app.listen(PORT, ()=>{
+server.listen(PORT, ()=>{
   console.log("Server has just started...");
 })
