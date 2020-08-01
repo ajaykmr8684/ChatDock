@@ -66,7 +66,7 @@ const socketio = require("socket.io");
 const path = require("path");
 const server = http.createServer(app);
 const io = socketio(server);
-const PORT = 3000 || process.env.PORT;
+const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, "public")));
 const users = {}
 
